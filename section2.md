@@ -79,19 +79,29 @@
     `$yum -y install nginx`  
 
   5 nginxの実行と登録   
+
    centos7の場合  
-   `$systemctl start nginx`  
-   `$systemctl enable nginx`  
+
+    $systemctl start nginx  
+    $systemctl enable nginx  
+
    centos6.5の場合  
-   `$service nginx start`  
-   `$chkconfig nginx on`  
+
+    $service nginx start  
+    $chkconfig nginx on  
+
   6 php-fpmの実行と登録  
+
    centos7の場合  
-   `$systemctl start php-fpm`  
-   `$systemctl enable php-fpm`  
+
+    $systemctl start php-fpm  
+    $systemctl enable php-fpm  
+
    centos6.5の場合  
-   `$service php-fpm start`  
-   `$chkconfig php-fpm on`  
+
+    $service php-fpm start  
+    $chkconfig php-fpm on  
+
   7 ngixの設定でphp-fpmが動くようにする  
    `$vi /etc/nginx/conf.d/default.conf`  
    下記のように編集する  
@@ -255,7 +265,7 @@
   14 Apacheの起動  
    `$sudo /usr/local/apache2/bin/apachectl start`  
 
-   下記のメッセージが出たら  
+    下記のメッセージが出たら  
     httpd: apr_sockaddr_info_get() failed for vagrant-centos65.vagrantup.com  
     httpd: Could not reliably determine the server's fully qualified domain name, using 127.0.0.1 for ServerName  
 
@@ -304,7 +314,7 @@
    `$yum install -y mysql mysql-devel mysql-server mysql-utilities`  
    centos7の場合  
    mariadbのインストール  
-   `$yum -y install mariadb mariadb-server  
+   `$yum -y install mariadb mariadb-server`  
   22 PHPのphp.iniファイルにmysqlのパスを記述する  
    `$sudo vi /usr/local/lib/php.ini`  
 
@@ -409,13 +419,13 @@
      100%    680 (longest request)  
 
   3 [日本語ローカルサイト](https://ja.wordpress.org/)のプラグインから[WP Super Cache](https://downloads.wordpress.org/plugin/wp-super-cache.1.4.4.zip)をダウンロードする  
-  4 wordpressにログインする
-  6 プラグインをクリック  
+  4 wordpressにログインする  
+  5 プラグインをクリック  
    新規追加をクリック  
-  7 プラグインのアップロードをクリック  
-  8 ダウンロードしたプラグインを選択する  
-  9 インストールして適用する  
-  10 もう一度abコマンドを使って性能を確かめる 
+  6 プラグインのアップロードをクリック  
+  7 ダウンロードしたプラグインを選択する  
+  8 インストールして適用する  
+  9 もう一度abコマンドを使って性能を確かめる 
 
        $ab -k -c 1000 -n 1000 192.168.xxx.xxx/wordpress  
        Server Software:        nginx/1.9.0  
@@ -457,7 +467,7 @@
       99%    987  
      100%    989 (longest request)  
 
-   11 abコマンドを実行した結果の最終行を何も入れてない状態のとプラグイン入れたあとを比較する  
+   10 abコマンドを実行した結果の最終行を何も入れてない状態のとプラグイン入れたあとを比較する  
    プラグイン入れたほうが数字が大きかったら速くなってる  
 
 ## 2-5 Vagrant設定  
@@ -515,7 +525,7 @@
   5 オフラインでライセンス取得する  
    `$sudo /opt/nessus/sbin/nessuscli fetch --challenge`  
    下記のような分が表示されるのコードをメモしとく  
-   Challenge code: 7235205e82b3f8767273f8ebace64da802ea17ed
+   `Challenge code: 7235205e82b3f8767273f8ebace64da802ea17ed`  
   6 [Nessus HomeFeed](http://www.tenable.com/products/nessus-home)で登録して無料ライセンスを習得する
    登録したメールアドレスにNessus Registrationからメールが来る  
    下記のような分がある  
