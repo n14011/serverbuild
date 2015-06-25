@@ -309,11 +309,11 @@
     </IfModule>  
       LoadModule php5_module modules/libphp5.soがなかったら追記する  
 
-  21 mysqlをインストールする  
+  21 MySQLをインストールする  
    centos6の場合  
    `$yum install -y mysql mysql-devel mysql-server mysql-utilities`  
    centos7の場合  
-   mariadbのインストール  
+   Mariadbのインストール  
    `$yum -y install mariadb mariadb-server`  
   22 PHPのphp.iniファイルにmysqlのパスを記述する  
    `$sudo vi /usr/local/lib/php.ini`  
