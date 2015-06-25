@@ -307,7 +307,7 @@
     <IfModule dir_module>  
     DirectoryIndex index.html index.php  
     </IfModule>  
-      LoadModule php5_module modules/libphp5.soがなかったら追記する  
+      LoadModule php5_module modules/libphp5.so ←なかったら追記する  
 
   21 MySQLをインストールする  
    centos6の場合  
