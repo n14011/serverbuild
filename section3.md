@@ -123,8 +123,13 @@
 
 ### ユーザー名とパスワードを`/etc/ansible/hosts`に書き込む
     $vi /etc/ansible/hosts
-    192.168.33.132 ansible_ssh_user=vagrant ansible_ssh_private_key_file=~/.vagrant.d/insecure_private_key
 
+    192.168.33.132 ansible_ssh_user=vagrant ansible_ssh_private_key_file=~/.vagrant.d/insecure_private_key
+### hostsファイルの作成(Vagrantfileがあるディレクトリに!！)
+    vi hosts
+
+    [all]
+    192.168.33.132
 ###  ansibleの実行の仕方
 
    `$ansible-playbook 実行したいファイル名 -i hosts -k`
