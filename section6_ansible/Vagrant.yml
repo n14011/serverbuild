@@ -1,0 +1,7 @@
+- hosts: all
+  user: ec2-user
+  sudo: yes
+  roles:
+     - install
+     - mysql
+     - wordpress
