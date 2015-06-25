@@ -148,5 +148,5 @@ ifcfg-enp0s8のファイルも同じようにする
 4: [PHP以外の環境を構築する](section4.md)  
 5: [DNSサーバーを動作させる](section5.md)  
 6: [AWS](section6.md)  
-[section3_ansible](section3_ansible)
-[section6_ansible](section6_ansible)
+[section3_ansible](section3_ansible)  
+[section6_ansible](section6_ansible)  
