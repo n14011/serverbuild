@@ -125,7 +125,7 @@
     $vi /etc/ansible/hosts
 
     192.168.33.132 ansible_ssh_user=vagrant ansible_ssh_private_key_file=~/.vagrant.d/insecure_private_key
-### hostsファイルの作成(Vagrantfileがあるディレクトリに!！)
+### hostsファイルの作成(Vagrantfileがあるディレクトリに！)
     vi hosts
 
     [all]
